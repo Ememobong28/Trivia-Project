@@ -1,8 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cye-iK-7Xd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Trivia View Controller-->
+        <scene sceneID="n43-vx-ZGL">
+            <objects>
+                <viewController id="Cye-iK-7Xd" customClass="TriviaViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9OU-OR-KHL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xju-pv-5cY">
+                                <rect key="frame" x="141" y="98" width="111.33333333333331" height="23.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                <color key="textColor" red="0.0079117229278074363" green="0.0079900568181817677" blue="0.0079900568181817677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuL-t1-ghD">
+                                <rect key="frame" x="30" y="172" width="333" height="333"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zuL-t1-ghD" secondAttribute="height" multiplier="1:1" id="RHv-6X-kR1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                <color key="textColor" red="0.0079117229279999993" green="0.0079900568179999999" blue="0.0079900568179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hsx-uv-lr0">
+                                <rect key="frame" x="30" y="533" width="333" height="176"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4n-V2-mso">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="35"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Button">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="Futura-Medium"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="Cye-iK-7Xd" eventType="touchUpInside" id="Xc8-JK-u9g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieR-dB-d4J">
+                                        <rect key="frame" x="0.0" y="47" width="333" height="35"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Button">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="Futura-Medium"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="Cye-iK-7Xd" eventType="touchUpInside" id="JXY-Mz-Tn8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sye-pY-wUy">
+                                        <rect key="frame" x="0.0" y="94" width="333" height="35"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Button">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="Futura-Medium"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="Cye-iK-7Xd" eventType="touchUpInside" id="3ip-D3-x20"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcG-yq-v06">
+                                        <rect key="frame" x="0.0" y="141" width="333" height="35"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Button">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="Futura-Medium"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answerButtonTapped:" destination="Cye-iK-7Xd" eventType="touchUpInside" id="vsv-f2-fTM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H2e-Gz-E6u"/>
+                        <color key="backgroundColor" red="0.57254904510000004" green="0.79607844350000001" blue="0.92941176889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="zuL-t1-ghD" firstAttribute="centerX" secondItem="9OU-OR-KHL" secondAttribute="centerX" id="54O-xp-vBT"/>
+                            <constraint firstItem="zuL-t1-ghD" firstAttribute="leading" secondItem="H2e-Gz-E6u" secondAttribute="leading" constant="30" id="BA9-n8-aZV"/>
+                            <constraint firstItem="xju-pv-5cY" firstAttribute="centerX" secondItem="9OU-OR-KHL" secondAttribute="centerX" id="RgU-0V-wO8"/>
+                            <constraint firstItem="hsx-uv-lr0" firstAttribute="top" secondItem="zuL-t1-ghD" secondAttribute="bottom" constant="28" id="V8e-W9-Ef1"/>
+                            <constraint firstItem="zuL-t1-ghD" firstAttribute="top" secondItem="xju-pv-5cY" secondAttribute="bottom" constant="50.333333333333329" id="XDn-05-iuT"/>
+                            <constraint firstItem="hsx-uv-lr0" firstAttribute="width" secondItem="zuL-t1-ghD" secondAttribute="width" id="hYl-5I-tET"/>
+                            <constraint firstItem="xju-pv-5cY" firstAttribute="top" secondItem="H2e-Gz-E6u" secondAttribute="top" constant="39" id="mfI-Ui-Mq9"/>
+                            <constraint firstItem="hsx-uv-lr0" firstAttribute="centerX" secondItem="zuL-t1-ghD" secondAttribute="centerX" id="trX-pu-AMJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AnswerButton1" destination="v4n-V2-mso" id="PBk-zi-IHh"/>
+                        <outlet property="AnswerButton2" destination="ieR-dB-d4J" id="nuN-Jd-R9v"/>
+                        <outlet property="AnswerButton3" destination="sye-pY-wUy" id="32O-1P-Goo"/>
+                        <outlet property="AnswerButton4" destination="vcG-yq-v06" id="VY3-jj-qyK"/>
+                        <outlet property="QuestionLabel" destination="zuL-t1-ghD" id="rrw-zC-Wrc"/>
+                        <outlet property="questionNumberAndCategoryLabel" destination="xju-pv-5cY" id="D19-UC-5PS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCL-Ae-QCR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25.190839694656489" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
 </document>
